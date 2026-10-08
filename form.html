@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form</title>
+    </head>
+    <body>
+        <h1>Formulir Pendaftaran</h1>
+        <form>
+            <label for="name">Nama Lengkap:</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap"><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan email"><br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" placeholder="Masukkan password"><br><br>
+
+            <label for="age">Umur:</label>
+            <input type="number" id="age" name="age" placeholder="Masukkan umur"><br><br>
+
+            <label for="birthdate">Tanggal Lahir:</label>
+            <input type="date" id="birthdate" name="birthdate"><br><br>
+
+            <label for="gender" >Jenis Kelamin:</label><br><br>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Laki-laki</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Perempuan</label><br><br>
+
+            <input type="checkbox" id="hobby1" name="hobby" value="coding">
+            <label for="hobby1">Coding</label><br>
+            <input type="checkbox" id="hobby2" name="hobby" value="gaming">
+            <label for="hobby2">Gaming</label><br>
+            <input type="checkbox" id="hobby3" name="hobby" value="photography">
+            <label for="hobby3">Photografi</label><br>
+
+            <labeL for="Jurusan" >Jurusan:</label>
+            <select id="Jurusan" name="Jurusan">
+                <option value="Teknik Informatika">Teknik Informatika</option>
+                <option value="Sistem Informasi">Sistem Informasi</option>
+                <option value="Teknik Komputer Jaringan">Teknik Komputer Jaringan</option>
+            </select><br><br>
+
+            <label for="Alamat" >Alamat:</label><br>
+            <textarea id="Alamat" name="Alamat" rows="4" cols="50" placeholder="Masukkan alamat lengkap"></textarea><br><br>
+
+            <label for="foto">Upload Foto:</label>
+            <input type="file" id="foto" name="foto"><br><br>
+
+            <label for="website">Website:</label>
+            <input type="url" id="website" name="website" placeholder="https://www.example.com"><br><br>
+
+            <input type="submit" value="Kirim">
+            <input type="reset" value="Reset">
+        </form>
+        <a href="table1.html">Lihat Tabel</a>
+    </body>
