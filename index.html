@@ -2,11 +2,67 @@
 <html lang="en">
     <head>
         <title>Profile</title>
+        <style>
+    #image {
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+    body {
+        margin: 0;
+        padding: 20px;
+        min-height: 100vh;
+        background: linear-gradient(-45deg, #fffffffd, #3974f3, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradientMove 8s ease infinite;
+    }
+
+    @keyframes gradientMove {
+        0%   { background-position: 0% 50%; }
+        50%  { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .animation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.character {
+    width: 300px;
+    height: auto;
+    margin-bottom: -50px; 
+    position: relative;
+    z-index: 2;            
+}
+
+#image {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+</style>
     </head>
     <body>
+       <
        <h1 style="color: blue;">Profil Mahasiswa</h1>
-       <img src="download.jpg" alt="Foto Profil" width="200">
+
+<div class="animation">
+    <video class="character" autoplay muted loop playsinline>
+        <source src="website-animatiion-final.webm" type="video/webm">
+    </video>
+    <img id="image" src="download.jpg" alt="Foto Profil">
+</div>
+
        <br>
+       
        <h1 style="color: red;">Data Diri</h1>
        <p> Nama saya <b>Rio Ricky Febryan</b>. Saya adalah seorang mahasiswa Sistem Informasi (S1).</p>
        <p>Saya sedang mempelajari <b>HTML,</b> CSS dan JavaScript. </p>
