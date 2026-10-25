@@ -86,27 +86,64 @@
             border-radius: 6px;
         }
 
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 28px;
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.5);
-            border-radius: 999px;
-            transition: background 0.2s, transform 0.2s;
-        }
+       
 
         .button:hover {
             background: rgba(255, 255, 255, 0.35);
             transform: translateY(-2px);
         }
+        .navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 10px 14px;
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.navbar a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.navbar a.active {
+  background: #ffcc5c;   /* samakan dengan warna kuning "Data Diri" */
+  color: #1d3a6e;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .navbar { border-radius: 20px; }
+  .navbar a { padding: 7px 12px; font-size: 13px; }
+}
     </style>
 </head>
 <body>
-    <div class="kartu">
+         <nav class="navbar">
+         <a href="index.html" class="active">Tentang Saya</a>
+         <a href="educations.html">Education</a>
+         <a href="course-schedule.html">Jadwal Kuliah</a>
+         <a href="Hobbies.html">Hobbies</a>
+         <a href="form.html">Form</a>
+         <a href="table1.html">Tabel 1</a>
+         <a href="table2.html">Table 2</a>
+         <a href="table3.html">Table 3</a>
+        </nav>
         <h1>Profil Mahasiswa</h1>
 
         <div class="animation">
@@ -121,7 +158,7 @@
         <p>Saya sedang mempelajari <b>HTML</b>, CSS dan JavaScript.</p>
         <p>Target saya adalah sebagai <mark>Game Developer</mark>.</p>
 
-        <a class="button" href="about-me.html">Tentang Saya</a>
+        
     </div>
 </body>
 </html>
