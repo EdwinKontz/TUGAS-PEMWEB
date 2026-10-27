@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Latihan JavaScript</title>
+  <style>
+    :root {
+      --bg-1: #229fd0;
+      --bg-2: #2a66a8;
+      --glass: rgba(255, 255, 255, 0.14);
+      --glass-border: rgba(255, 255, 255, 0.35);
+      --accent: #ffc84a;
+      --ink: #12315a;
+      --text: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+      color: var(--text);
+      background: linear-gradient(135deg, var(--bg-1) 0%, var(--bg-2) 100%) fixed;
+    }
+
+    
+    nav {
+      width: min(900px, calc(100% - 32px));
+      margin: 56px auto 0;
+      padding: 10px 16px;
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      overflow-x: auto;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 999px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    nav a {
+      flex: none;
+      padding: 8px 16px;
+      border-radius: 999px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    nav a:hover { background: rgba(255, 255, 255, 0.18); }
+
+    nav a.active {
+      background: var(--accent);
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    main {
+      width: min(720px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 64px;
+    }
+
+    h1 {
+      margin: 0 0 24px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    
+    section {
+      margin-bottom: 20px;
+      padding: 20px 24px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      color: var(--accent);
+    }
+
+    .soal {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .soal:first-of-type { border-top: 0; }
+
+    h3 {
+      margin: 0;
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    button {
+      flex: none;
+      padding: 7px 18px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--ink);
+      font: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    button:hover { filter: brightness(1.06); }
+
+    button:focus-visible,
+    nav a:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 2px;
+    }
+
+    @media (max-width: 520px) {
+      h1 { font-size: 26px; }
+      section { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  
+  <nav>
+  <a href="../../index.html">Profile</a>
+  <a href="../../about-me.html">Tentang Saya</a>
+  <a href="../../educations.html">Education</a>
+  <a href="../../course-schedule.html">Jadwal Kuliah</a>
+  <a href="../../Hobbies.html">Hobbies</a>
+  <a href="../../form.html">Form</a>
+  <a href="../../table1.html">Tabel 1</a>
+  <a href="../../table2.html">Table 2</a>
+  <a href="../../table3.html">Table 3</a>
+  <a href="latihan-js.html" class="active">Latihan JS</a>
+</nav>
+
+  <main>
+    <h1>Latihan JavaScript</h1>
+
+    <section>
+      <h2>Latihan Percabangan</h2>
+      <div class="soal">
+        <h3>Soal 1 Lulus/Tidak Lulus</h3>
+        <button onclick="jalankanSoal1()">Jalankan</button>
+        <script src="latihan-percabangan-soal-1.js"></script>
+      </div>
+      <div class="soal">
+        <h3>Soal 2 Admin, User, Guest</h3>
+        <button onclick="jalankanSoal2()">Jalankan</button>
+        <script src="latihan-percabangan-soal-2.js"></script>
+      </div>
+    </section>
+
+    <section>
+      <h2>Latihan Perulangan</h2>
+      <div class="soal">
+        <h3>Soal 1, 1 sampai 5</h3>
+        <button onclick="jalankanSoal3()">Jalankan</button>
+        <script src="latihan-perulangan-soal-1.js"></script>
+      </div>
+      <div class="soal">
+        <h3>Soal 2 Hitung Mundur</h3>
+        <button onclick="jalankanSoal4()">Jalankan</button>
+        <script src="latihan-perulangan-soal-2.js"></script>
+      </div>
+    </section>
+
+    <section>
+      <h2>Latihan Function &amp; Logika</h2>
+      <div class="soal">
+        <h3>Soal 1 FizzBuzz</h3>
+        <button onclick="jalankanSoal5()">Jalankan</button>
+        <script src="latihan-function-dan-logika-soal-1.js"></script>
+      </div>
+      <div class="soal">
+        <h3>Soal 2 Genap or Ganjil</h3>
+        <button onclick="jalankanSoal6()">Jalankan</button>
+        <script src="latihan-function-dan-logika-soal-2.js"></script>
+      </div>
+      <div class="soal">
+        <h3>Soal 3 Kata Dibalik</h3>
+        <button onclick="jalankanSoal7()">Jalankan</button>
+        <script src="latihan-function-dan-logika-soal-3.js"></script>
+      </div>
+    </section>
+
+    <section>
+      <h2>Latihan Pola</h2>
+      <div class="soal">
+        <h3>Soal Segitiga</h3>
+        <button onclick="jalankanSoal8()">Jalankan</button>
+        <script src="latihan-pola-soal-1.js"></script>
+      </div>
+      <div class="soal">
+        <h3>Soal Persegi Panjang</h3>
+        <button onclick="jalankanSoal9()">Jalankan</button>
+        <script src="latihan-pola-soal-2.js"></script>
+      </div>
+      <div class="soal">
+        <h3>Soal Persegi Panjang Kosong</h3>
+        <button onclick="jalankanSoal10()">Jalankan</button>
+        <script src="latihan-pola-soal-3.js"></script>
+      </div>
+      <div class="soal">
+        <h3>Soal Segitiga Sama Sisi</h3>
+        <button onclick="jalankanSoal11()">Jalankan</button>
+        <script src="latihan-pola-soal-4.js"></script>
+      </div>
+      <div class="soal">
+        <h3>Soal Segitiga Sama Sisi 2</h3>
+        <button onclick="jalankanSoal12()">Jalankan</button>
+        <script src="latihan-pola-soal-5.js"></script>
+      </div>
+      <div class="soal">
+        <h3>Soal Belah Ketupat</h3>
+        <button onclick="jalankanSoal13()">Jalankan</button>
+        <script src="latihan-pola-soal-6.js"></script>
+      </div>
+      <div class="soal">
+        <h3>Soal Segitiga Jam Pasir</h3>
+        <button onclick="jalankanSoal14()">Jalankan</button>
+        <script src="latihan-pola-soal-7.js"></script>
+      </div>
+      <div class="soal">
+        <h3>Soal Segitiga Kosong</h3>
+        <button onclick="jalankanSoal15()">Jalankan</button>
+        <script src="latihan-pola-soal-8.js"></script>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
