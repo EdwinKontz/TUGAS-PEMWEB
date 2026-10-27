@@ -1,31 +1,174 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>About Me</title>
-    </head>
-    <body>
-        <h1><b>Tentang Saya</b></h1>
-        <p> Saya memiliki ketertarikan pada pengembangan aplikasi web. Saat ini saya sedang membuat</p>
-        <p> halaman web menggunakan HTML.</p>
-        <br>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tentang Saya</title>
+  <style>
+    :root {
+      --accent: #ffc84a;
+      --ink: #12315a;
+      --text: #ffffff;
+      --glass: rgba(255, 255, 255, 0.16);
+      --glass-border: rgba(255, 255, 255, 0.35);
+    }
 
+    * { box-sizing: border-box; }
 
-        <p> Teknologi yang saya sedang mempelajari:</p>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>PHP</li>
-            <li>MySQL</li>
-        </ul>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+      color: var(--text);
+      background: linear-gradient(135deg, #4a7fc1 0%, #22a6d6 45%, #2a86c0 100%) fixed;
+    }
 
-        <br>
-<h2><b> Target Belajar</b></h2>
-       <ol>
-       <li>Memahami HTML</li>
-       <li>Memahami CSS</li>
-       <li>Memahami JavaScript</li>
-       <li>Membuat Website </li>
-       </ol>
-<a href="educations.html">Riwayat Pendidikan</a>
-    </body>
+    /* Navigasi pill kaca */
+    nav {
+      width: min(900px, calc(100% - 32px));
+      margin: 52px auto 0;
+      padding: 10px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4px 6px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 40px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    nav a {
+      padding: 8px 16px;
+      border-radius: 999px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    nav a:hover { background: rgba(255, 255, 255, 0.18); }
+
+    nav a.active {
+      background: var(--accent);
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    main {
+      width: min(640px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 64px;
+    }
+
+    h1 {
+      margin: 0 0 24px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    section {
+      margin-bottom: 20px;
+      padding: 24px 28px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    h2 {
+      margin: 0 0 12px;
+      font-size: 20px;
+      color: var(--accent);
+    }
+
+    p {
+      margin: 0 0 16px;
+      line-height: 1.6;
+      font-size: 15px;
+    }
+
+    ul, ol {
+      margin: 0;
+      padding-left: 22px;
+      line-height: 1.8;
+      font-size: 15px;
+    }
+
+    li::marker { color: var(--accent); }
+
+    .btn {
+      display: inline-block;
+      margin-top: 4px;
+      padding: 9px 22px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .btn:hover { filter: brightness(1.06); }
+
+    a:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 2px;
+    }
+
+    @media (max-width: 520px) {
+      h1 { font-size: 26px; }
+      section { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Ganti index.html dengan nama file halaman Profile kamu -->
+  <nav>
+    <a href="index.html">Profile</a>
+    <a href="about-me.html" class="active">Tentang Saya</a>
+    <a href="educations.html">Education</a>
+    <a href="course-schedule.html">Jadwal Kuliah</a>
+    <a href="Hobbies.html">Hobbies</a>
+    <a href="form.html">Form</a>
+    <a href="table1.html">Tabel 1</a>
+    <a href="table2.html">Table 2</a>
+    <a href="table3.html">Table 3</a>
+    <a href="assets/js/latihan-js.html">Latihan JS</a>
+  </nav>
+
+  <main>
+    <h1>Tentang Saya</h1>
+
+    <section>
+      <p>Saya memiliki ketertarikan pada pengembangan aplikasi web. Saat ini saya sedang membuat halaman web menggunakan HTML.</p>
+      <h2>Teknologi yang sedang saya pelajari</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>PHP</li>
+        <li>MySQL</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Target Belajar</h2>
+      <ol>
+        <li>Memahami HTML</li>
+        <li>Memahami CSS</li>
+        <li>Memahami JavaScript</li>
+        <li>Membuat Website</li>
+      </ol>
+    </section>
+
+  </main>
+
+</body>
+</html>
