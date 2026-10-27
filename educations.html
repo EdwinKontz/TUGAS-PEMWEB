@@ -1,51 +1,201 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Riwayat Pendidikan</title>
-        
-    </head>
-    <body>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Riwayat Pendidikan</title>
+  <style>
+    :root {
+      --accent: #ffc84a;
+      --ink: #12315a;
+      --text: #ffffff;
+      --glass: rgba(255, 255, 255, 0.16);
+      --glass-border: rgba(255, 255, 255, 0.35);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+      color: var(--text);
+      background: linear-gradient(135deg, #4a7fc1 0%, #22a6d6 45%, #2a86c0 100%) fixed;
+    }
+
+    
+    nav {
+      width: min(900px, calc(100% - 32px));
+      margin: 52px auto 0;
+      padding: 10px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 4px 6px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 40px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    nav a {
+      padding: 8px 16px;
+      border-radius: 999px;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    nav a:hover { background: rgba(255, 255, 255, 0.18); }
+
+    nav a.active {
+      background: var(--accent);
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    main {
+      width: min(720px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 28px 0 64px;
+    }
+
+    h1 {
+      margin: 0 0 24px;
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    section {
+      margin-bottom: 20px;
+      padding: 24px 28px;
+      background: var(--glass);
+      border: 1px solid var(--glass-border);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+    }
+
+    caption {
+      padding-bottom: 12px;
+      text-align: left;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    th, td {
+      padding: 12px 14px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    th {
+      font-weight: 600;
+      color: var(--accent);
+      border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    }
+
+    tbody tr:last-child td { border-bottom: 0; }
+
+    tbody tr:hover { background: rgba(255, 255, 255, 0.1); }
+
+    .btn {
+      display: inline-block;
+      padding: 9px 22px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .btn:hover { filter: brightness(1.06); }
+
+    a:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 2px;
+    }
+
+    @media (max-width: 520px) {
+      h1 { font-size: 26px; }
+      section { padding: 18px; }
+      th, td { padding: 10px 8px; font-size: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  
+  <nav>
+    <a href="index.html">Profile</a>
+    <a href="about-me.html">Tentang Saya</a>
+    <a href="educations.html" class="active">Education</a>
+    <a href="course-schedule.html">Jadwal Kuliah</a>
+    <a href="Hobbies.html">Hobbies</a>
+    <a href="form.html">Form</a>
+    <a href="table1.html">Tabel 1</a>
+    <a href="table2.html">Table 2</a>
+    <a href="table3.html">Table 3</a>
+    <a href="assets/js/latihan-js.html">Latihan JS</a>
+  </nav>
+
+  <main>
     <h1>Riwayat Pendidikan</h1>
-    <p style="padding: 30px;"> Riwayat Pendidikan </p>
 
-    <table>
-        <table border="1">
-    <thead>
-        <tr>
-            <th><b>No</b></th>
-            <th><b>Jenjang</b></th>
-            <th><b>Nama Sekolah</b></th>
-            <th><b>Tahun</b></th>
-        </tr>
-    </thead>
-
-    <tbody>
-        <tr>
+    <section>
+      <table>
+        <caption>Riwayat Pendidikan</caption>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Jenjang</th>
+            <th>Nama Sekolah</th>
+            <th>Tahun</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
             <td>1</td>
             <td>SD</td>
             <td>SDH Lippo Cikarang</td>
             <td>2014-2020</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>2</td>
             <td>SMP</td>
             <td>SMPN 2 Kalijati</td>
             <td>2022-2024</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>3</td>
             <td>SMA</td>
             <td>SMAN 1 Kalijati</td>
             <td>2024-2026</td>
-        </tr>
-        <tr>
+          </tr>
+          <tr>
             <td>4</td>
             <td>S1</td>
             <td>UM</td>
             <td>2026-Sekarang</td>
-        </tr>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
 
-    </tbody>
-    </table>
-    <a href ="course-schedule.html">Jadwal Kuliah</a>
 </body>
+</html>
