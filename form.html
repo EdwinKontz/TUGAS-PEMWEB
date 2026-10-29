@@ -1,57 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Form</title>
-    </head>
-    <body>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulir Pendaftaran</title>
+    <link rel="stylesheet" href="jadwal.css">
+</head>
+<body>
+    <nav class="menu">
+        <a href="index.html">Profile</a>
+        <a href="tentang.html">Tentang Saya</a>
+        <a href="education.html">Education</a>
+        <a href="course-schedule.html">Jadwal Kuliah</a>
+        <a href="Hobbies.html">Hobbies</a>
+        <a href="form.html" class="aktif">Form</a>
+        <a href="table1.html">Tabel 1</a>
+        <a href="table2.html">Table 2</a>
+        <a href="table3.html">Table 3</a>
+        <a href="assets/js/latihan-js.html">Latihan JS</a>
+    </nav>
+
+    <main class="kartu">
         <h1>Formulir Pendaftaran</h1>
-        <form>
-            <label for="name">Nama Lengkap:</label>
-            <input type="text" id="name" name="name" placeholder="Masukkan nama lengkap"><br><br>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Masukkan email"><br><br>
+        <form class="form">
+            <div class="field">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama lengkap">
+            </div>
 
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password" placeholder="Masukkan password"><br><br>
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Masukkan email">
+            </div>
 
-            <label for="age">Umur:</label>
-            <input type="number" id="age" name="age" placeholder="Masukkan umur"><br><br>
+            <div class="field">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Masukkan password">
+            </div>
 
-            <label for="birthdate">Tanggal Lahir:</label>
-            <input type="date" id="birthdate" name="birthdate"><br><br>
+            <div class="field">
+                <label for="umur">Umur</label>
+                <input type="number" id="umur" name="umur" placeholder="Masukkan umur">
+            </div>
 
-            <label for="gender" >Jenis Kelamin:</label><br><br>
-            <input type="radio" id="male" name="gender" value="male">
-            <label for="male">Laki-laki</label>
-            <input type="radio" id="female" name="gender" value="female">
-            <label for="female">Perempuan</label><br><br>
+            <div class="field">
+                <label for="lahir">Tanggal Lahir</label>
+                <input type="date" id="lahir" name="lahir">
+            </div>
 
-            <input type="checkbox" id="hobby1" name="hobby" value="coding">
-            <label for="hobby1">Coding</label><br>
-            <input type="checkbox" id="hobby2" name="hobby" value="gaming">
-            <label for="hobby2">Gaming</label><br>
-            <input type="checkbox" id="hobby3" name="hobby" value="photography">
-            <label for="hobby3">Photografi</label><br>
+            <div class="field">
+                <span class="judul">Jenis Kelamin</span>
+                <div class="pilihan">
+                    <label><input type="radio" name="gender" value="L"> Laki-laki</label>
+                    <label><input type="radio" name="gender" value="P"> Perempuan</label>
+                </div>
+            </div>
 
-            <labeL for="Jurusan" >Jurusan:</label>
-            <select id="Jurusan" name="Jurusan">
-                <option value="Teknik Informatika">Teknik Informatika</option>
-                <option value="Sistem Informasi">Sistem Informasi</option>
-                <option value="Teknik Komputer Jaringan">Teknik Komputer Jaringan</option>
-            </select><br><br>
+            <div class="field">
+                <span class="judul">Hobi</span>
+                <div class="pilihan">
+                    <label><input type="checkbox" name="hobi" value="coding"> Coding</label>
+                    <label><input type="checkbox" name="hobi" value="gaming"> Gaming</label>
+                    <label><input type="checkbox" name="hobi" value="photografi"> Photografi</label>
+                </div>
+            </div>
 
-            <label for="Alamat" >Alamat:</label><br>
-            <textarea id="Alamat" name="Alamat" rows="4" cols="50" placeholder="Masukkan alamat lengkap"></textarea><br><br>
+            <div class="field">
+                <label for="jurusan">Jurusan</label>
+                <select id="jurusan" name="jurusan">
+                    <option>Teknik Informatika</option>
+                    <!-- tambahkan option jurusan lain sesuai kodemu -->
+                </select>
+            </div>
 
-            <label for="foto">Upload Foto:</label>
-            <input type="file" id="foto" name="foto"><br><br>
+            <div class="field">
+                <label for="alamat">Alamat</label>
+                <textarea id="alamat" name="alamat" rows="4" placeholder="Masukkan alamat lengkap"></textarea>
+            </div>
 
-            <label for="website">Website:</label>
-            <input type="url" id="website" name="website" placeholder="https://www.example.com"><br><br>
+            <div class="field">
+                <label for="foto">Upload Foto</label>
+                <input type="file" id="foto" name="foto">
+            </div>
 
-            <input type="submit" value="Kirim">
-            <input type="reset" value="Reset">
+            <div class="field">
+                <label for="website">Website</label>
+                <input type="url" id="website" name="website" placeholder="https://www.example.com">
+            </div>
+
+            <div class="aksi">
+                <button type="submit" class="tombol">Kirim</button>
+                <button type="reset" class="tombol sekunder">Reset</button>
+            </div>
         </form>
-        <a href="table1.html">Lihat Tabel</a>
-    </body>
+
+       
+    </main>
+</body>
+</html>
